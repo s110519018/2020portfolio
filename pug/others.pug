@@ -1,0 +1,139 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    title YU XUAN LEE's Front_End Portfolio
+    link(rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Concert+One&display=swap")
+    link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css")
+    link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css")
+    link(rel="stylesheet" href="../css/time.css")
+  body
+    header
+      a(href="index.html")
+        img(src="../img/logo_s.svg", alt="")
+    .menu
+      input(type="checkbox" name="toggle" id="toggle")
+      label(for="toggle") 
+        .cross
+          .line1
+          .line2
+      ul
+        li
+          a(href="index.html") Home
+        li
+          a(href="front_end.html") Front-end
+        li
+          a(href="app.html") APP
+    section.cd-horizontal-timeline
+      .timeline
+        .events-wrapper
+          .events
+            ol
+              //- li(v-for="t in times.slice(1,5)")
+              //-   a(href="#0" v-bind:data-date="t.datadate" v-bind:class="t.iscss") {{t.date.substr(0,6)}}
+              li
+                a.selected(href="#0" data-date="29/11/2017") 29 NOV
+              li
+                a(href="#0" data-date="4/12/2017") 4 DEC
+              li
+                a(href="#0" data-date="23/12/2017") 23 DEC
+              li
+                a(href="#0" data-date="15/6/2018") 15 JUN
+              li
+                a(href="#0" data-date="7/1/2019") 7 JAN
+              li
+                a(href="#0" data-date="9/1/2019") 9 JAN
+              li
+                a(href="#0" data-date="16/4/2019") 16 APR
+              li
+                a(href="#0" data-date="29/5/2019") 29 MAY
+              li
+                a(href="#0" data-date="9/6/2020") 9 JUN
+              //- li
+              //-   a(href="#0" data-date="19/01/2015") 29 Jan
+              //- li
+              //-   a(href="#0" data-date="03/03/2015") 3 Mar
+            span.filling-line(aria-hidden="true")
+          // .events
+        // .events-wrapper
+        ul.cd-timeline-navigation
+          li
+            a.prev.inactive(href="#0") Prev
+          li
+            a.next(href="#0") Next
+        // .cd-timeline-navigation
+      // .timeline
+      .events-content#app1
+        ol
+          li(v-for="w in works" v-bind:data-date="w.datadate" v-bind:class="w.iscss")
+            em {{w.date}}
+            h2 {{w.name}}
+            br
+            img(src="../img/breakline.svg", alt="")
+            p {{w.tool}}
+              br
+              |{{w.responsibility}}
+              br
+              |{{w.content}}
+            .workimgs(v-bind:style="{ 'background-color': w.workimgs_color}")
+                .m_index(v-bind:style="{ 'background-color': w.m_index_color}")
+                img.img1(:src="w.img1", alt="")
+                img.img2(:src="w.img2", alt="")
+            .bottom(v-bind:style="{ 'background-color': w.bottom_color}")
+              a.view-btn(:href="w.link" target="_blank") View
+      footer Copyright © Ritesh Kumar https://codepen.io/ritz078/pen/LGRWjE
+          //- li(data-date="20/04/2014")
+          //-   h2 Event title here
+          //-   em February 28th, 2014
+          //-   p
+          //-     | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at, eaque hic repellendus sit dicta consequatur quae, ut harum ipsam molestias maxime non nisi reiciendis eligendi! Doloremque quia pariatur harum ea amet quibusdam quisquam, quae, temporibus dolores porro doloribus.
+          //- li(data-date="20/04/2014")
+          //-   h2 Event title here
+          //-   em March 20th, 2014
+          //-   p
+          //-     | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at, eaque hic repellendus sit dicta consequatur quae, ut harum ipsam molestias maxime non nisi reiciendis eligendi! Doloremque quia pariatur harum ea amet quibusdam quisquam, quae, temporibus dolores porro doloribus.
+          //- li(data-date="20/05/2014")
+          //-   h2 Event title here
+          //-   em May 20th, 2014
+          //-   p
+          //-     | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at, eaque hic repellendus sit dicta consequatur quae, ut harum ipsam molestias maxime non nisi reiciendis eligendi! Doloremque quia pariatur harum ea amet quibusdam quisquam, quae, temporibus dolores porro doloribus.
+          //- li(data-date="09/07/2014")
+          //-   h2 Event title here
+          //-   em July 9th, 2014
+          //-   p
+          //-     | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at, eaque hic repellendus sit dicta consequatur quae, ut harum ipsam molestias maxime non nisi reiciendis eligendi! Doloremque quia pariatur harum ea amet quibusdam quisquam, quae, temporibus dolores porro doloribus.
+          //- li(data-date="30/08/2014")
+          //-   h2 Event title here
+          //-   em August 30th, 2014
+          //-   p
+          //-     | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at, eaque hic repellendus sit dicta consequatur quae, ut harum ipsam molestias maxime non nisi reiciendis eligendi! Doloremque quia pariatur harum ea amet quibusdam quisquam, quae, temporibus dolores porro doloribus.
+          //- li(data-date="15/09/2014")
+          //-   h2 Event title here
+          //-   em September 15th, 2014
+          //-   p
+          //-     | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at, eaque hic repellendus sit dicta consequatur quae, ut harum ipsam molestias maxime non nisi reiciendis eligendi! Doloremque quia pariatur harum ea amet quibusdam quisquam, quae, temporibus dolores porro doloribus.
+          //- li(data-date="01/11/2014")
+          //-   h2 Event title here
+          //-   em November 1st, 2014
+          //-   p
+          //-     | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at, eaque hic repellendus sit dicta consequatur quae, ut harum ipsam molestias maxime non nisi reiciendis eligendi! Doloremque quia pariatur harum ea amet quibusdam quisquam, quae, temporibus dolores porro doloribus.
+          //- li(data-date="10/12/2014")
+          //-   h2 Event title here
+          //-   em December 10th, 2014
+          //-   p
+          //-     | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at, eaque hic repellendus sit dicta consequatur quae, ut harum ipsam molestias maxime non nisi reiciendis eligendi! Doloremque quia pariatur harum ea amet quibusdam quisquam, quae, temporibus dolores porro doloribus.
+          //- li(data-date="19/01/2015")
+          //-   h2 Event title here
+          //-   em January 19th, 2015
+          //-   p
+          //-     | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at, eaque hic repellendus sit dicta consequatur quae, ut harum ipsam molestias maxime non nisi reiciendis eligendi! Doloremque quia pariatur harum ea amet quibusdam quisquam, quae, temporibus dolores porro doloribus.
+          //- li(data-date="03/03/2015")
+          //-   h2 Event title here
+          //-   em March 3rd, 2015
+          //-   p
+          //-     | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at, eaque hic repellendus sit dicta consequatur quae, ut harum ipsam molestias maxime non nisi reiciendis eligendi! Doloremque quia pariatur harum ea amet quibusdam quisquam, quae, temporibus dolores porro doloribus.
+      // .events-content
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js")
+    //- script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mobile/1.4.5/jquery.mobile.min.js")
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.11/vue.js")
+    script(src="../js/time.js")

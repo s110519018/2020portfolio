@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="../css/hover.css"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Concert+One&amp;display=swap"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="../css/main.css"/>
+    <title>YU XUAN LEE's Portfolio</title>
+  </head>
+  <body>
+    <!--導覽列-->
+    <nav class="navbar navbar-expand-md fixed-top at_top"><a class="navbar-brand" href="#header_index"><img src="../img/logo_s.svg" alt=""/></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item"><a class="nav-link" href="#section_about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#section_works">Works</a></li>
+          <li class="nav-item"><a class="nav-link" href="#section_contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+    <!--首頁-->
+    <header id="header_index">
+      <div class="container">
+        <div class="title">
+          <h1>Hello!</h1>
+          <p>I'm Yu Xuan Lee , a  Front-end Developer.</p>
+        </div>
+        <!--.mountain是給js  --><img class="marginbottom mountain" src="../img/m_index.svg" alt=""/><img class="loveboat" src="../img/loveboat.svg" alt=""/>
+        <div class="explore at_top">EXPLORE</div>
+      </div>
+    </header>
+    <!--關於-->
+    <section id="section_about"><img class="marginbottom" src="../img/m_about.svg" alt=""/><img id="lion" src="../img/lion/lion_left_top.svg" alt=""/>
+      <!--放叉叉-->
+      <div id="cross"></div>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-sm-4"><img class="my_pic" src="../img/my_pic.svg" alt=""/></div>
+          <div class="col-sm-8 container_about">
+            <div class="row">
+              <div class="col-sm-10">
+                <h2 class="r1text">李淯萱 Yu Xuan Lee</h2>
+              </div>
+              <div class="col-sm-2"><img class="balloon_pink" src="../img/balloon_pink.svg" alt=""/></div>
+            </div>
+            <div class="row">
+              <div class="col-sm-3"><img class="balloon_yellow" src="../img/balloon_yellow.svg" alt=""/></div>
+              <div class="col-sm-9">
+                <h2 class="r2text">I'm a  Front-end Developer.</h2>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-10">
+                <h2 class="r3text">I have a passion for web design and love to create for web and mobile devices.</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--作品-->
+    <section id="section_works"><img class="marginbottom mountain_contact" src="../img/mountain_contact.svg" alt=""/>
+      <div class="works_title">WORKS</div>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-sm-4"><a class="hvr-wobble-skew" href="front_end.html"><img src="../img/c-frontend.png" alt=""/></a></div>
+          <div class="col-sm-4"><a class="hvr-wobble-skew" href="app.html"><img src="../img/c-app.png" alt=""/></a></div>
+          <div class="col-sm-4"><a class="hvr-wobble-skew" href="others.html"><img src="../img/c-others.png" alt=""/></a></div>
+        </div>
+      </div>
+    </section>
+    <!--聯絡-->
+    <section id="section_contact"><a href="https://www.instagram.com/xuan_tuo/"><img class="fish" id="fish_ig" src="../img/fish/fish_ig.svg" alt=""/></a><a href="https://www.facebook.com/profile.php?id=100005284330987"> <img class="fish" id="fish_fb" src="../img/fish/fish_fb.svg" alt=""/></a><a href="https://line.me/ti/p/JEos9e2tdK"><img class="fish" id="fish_line" src="../img/fish/fish_line.svg" alt=""/></a>
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-6">
+            <div class="mail">
+              <div class="envelope"><img src="../img/envelope.svg" alt=""/></div>
+              <div class="letter">
+                <form>
+                  <label>Name</label>
+                  <input type="text" name="userName"/>
+                  <label>Email</label>
+                  <input type="text" name="Email"/>
+                  <label>Content</label>
+                  <textarea name="Content"></textarea>
+                  <button class="btn-send">Submit</button>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-4 offset-2">
+            <h1>CONTACT</h1>
+            <p>If you have any question about me, <br> Don't hestitate to contact me !<br>Email: dsi020070@gmail.com<br>Phone: 0918-068-876</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.11/vue.js"></script>
+    <script src="../js/main.js"></script>
+  </body>
+</html>

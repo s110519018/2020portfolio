@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>YU XUAN LEE's Front_End Portfolio</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Concert+One&amp;display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/time.css">
+  </head>
+  <body>
+    <header><a href="index.html"><img src="../img/logo_s.svg" alt=""></a></header>
+    <div class="menu">
+      <input type="checkbox" name="toggle" id="toggle">
+      <label for="toggle"> 
+        <div class="cross">
+          <div class="line1"></div>
+          <div class="line2"></div>
+        </div>
+      </label>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="front_end.html">Front-end</a></li>
+        <li><a href="others.html">Others</a></li>
+      </ul>
+    </div>
+    <section class="cd-horizontal-timeline">
+      <div class="timeline">
+        <div class="events-wrapper">
+          <div class="events">
+            <ol>
+              <li><a class="selected" href="#0" data-date="8/12/2017">8 DEC</a></li>
+              <li><a href="#0" data-date="8/4/2018">8 APR</a></li>
+              <li><a href="#0" data-date="5/6/2018">5 JUN</a></li>
+            </ol><span class="filling-line" aria-hidden="true"></span>
+          </div>
+          <!-- .events-->
+        </div>
+        <!-- .events-wrapper-->
+        <ul class="cd-timeline-navigation">
+          <li><a class="prev inactive" href="#0">Prev</a></li>
+          <li><a class="next" href="#0">Next</a></li>
+        </ul>
+        <!-- .cd-timeline-navigation-->
+      </div>
+      <!-- .timeline-->
+      <div class="events-content" id="app2">
+        <ol>
+          <li v-for="w in works" v-bind:data-date="w.datadate" v-bind:class="w.iscss"><em>{{w.date}}</em>
+            <h2>{{w.name}}</h2><br><img src="../img/breakline.svg" alt="">
+            <p>{{w.tool}}<br>{{w.responsibility}}<br>{{w.content}}</p>
+            <div class="workimgs" v-bind:style="{ 'background-color': w.workimgs_color}">
+              <div class="m_index" v-bind:style="{ 'background-color': w.m_index_color}"></div><img class="img1" :src="w.img1" alt=""><img class="img2" :src="w.img2" alt="">
+            </div>
+            <div class="bottom" v-bind:style="{ 'background-color': w.bottom_color}"><a class="view-btn" :href="w.link" target="_blank">View</a></div>
+          </li>
+        </ol>
+      </div>
+      <footer>Copyright © Ritesh Kumar https://codepen.io/ritz078/pen/LGRWjE</footer>
+      <!-- .events-content-->
+    </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.11/vue.js"></script>
+    <script src="../js/time.js"></script>
+  </body>
+</html>

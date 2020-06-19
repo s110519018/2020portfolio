@@ -1,0 +1,47 @@
+[
+    {
+        "name":"旅遊急難救助APP",
+        "iscss":"selected",
+        "workimgs_color":"#9fc4de",
+        "m_index_color":"#9fc4de",
+        "bottom_color":"#86a5bb",
+        "datadate":"8/12/2017",
+        "date":"DEC 8 2017",
+        "tool":"",
+        "responsibility":"",
+        "content":"幫助旅客解決出外旅遊時遇到麻煩的 app，希望能即時解決大家出門在外會遇到的一些突發狀況。此外，RESCUER 還提供緊急聯絡功能，在危急時刻能將你的所在位置傳送給緊急連絡人，並通知鄰近警局，讓下載 app 的旅客都能夠順利完成旅遊計畫，也能玩得開心。",
+        "img1":"../img/app/rescuer.png",
+        "img2":"../img/app/RESCUR.png",
+        "link":"https://drive.google.com/file/d/1Sff_obQXICwAS6Vq_7o1K5_9Oq49e6VC/view?usp=sharing"
+    },
+    {
+        "name":"音樂串流服務平台 UI/UX設計",
+        "iscss":"",
+        "workimgs_color":"#bb80b5",
+        "m_index_color":"#bb80b5",
+        "bottom_color":"#96549d",
+        "datadate":"8/4/2018",
+        "date":"APR 8 2018",
+        "tool":"製作工具：Balsamiq、Photoshop",
+        "responsibility":"",
+        "content":"針對市面上音樂串流服務平台的UI設計分析及將其優點結合設計出此作品，設計出單手操作也能輕鬆掌握的版面。",
+        "img1":"../img/app/wk5 all.png",
+        "img2":"../img/app/wk5 all.png",
+        "link":"#"
+    },
+    {
+        "name":"太極Tai Chi APP",
+        "iscss":"",
+        "workimgs_color":"#a8a7a8",
+        "m_index_color":"#a8a7a8",
+        "bottom_color":"#666260",
+        "datadate":"5/6/2018",
+        "date":"JUN 5 2018",
+        "tool":"製作工具：Balsamiq、Photoshop、Illustrator、EXPO、React Native、firebase",
+        "responsibility":"成員：李淯萱、潘佑萱、蔡昀軒，負責部分：企劃、前端程式",
+        "content":"藉由太極APP來宣揚太極運動。太極APP以每日登入養成天天練太極的習慣，內頁除了有太極社團的最新消息和招式介紹，還記錄個人的等級與資料，能一邊激發自己學習向上的動力，一邊結交喜愛太極的同好。",
+        "img1":"../img/app/tachi.png",
+        "img2":"../img/app/tachi2.jpg",
+        "link":"https://www.youtube.com/watch?v=skIWrrwqNr4&feature=youtu.be"
+    }
+]

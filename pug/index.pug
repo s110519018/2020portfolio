@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet" href="../css/hover.css")
+        link(rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Concert+One&display=swap")
+        link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css")
+        link(rel="stylesheet" href="../css/main.css")
+        title YU XUAN LEE's Portfolio
+    body
+      //導覽列
+      nav.navbar.navbar-expand-md.fixed-top.at_top
+        a.navbar-brand(href='#header_index')
+          img(src="../img/logo_s.svg", alt="")
+        button.navbar-toggler(type='button' data-toggle='collapse' data-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation')
+          span.navbar-toggler-icon
+        #navbarSupportedContent.collapse.navbar-collapse
+          ul.navbar-nav.ml-auto
+            li.nav-item
+                a.nav-link(href="#section_about") About
+            li.nav-item
+                a.nav-link(href='#section_works') Works
+            li.nav-item
+                a.nav-link(href='#section_contact') Contact
+      //首頁
+      header#header_index
+        .container
+          .title
+            h1 Hello!
+            p I'm Yu Xuan Lee , a  Front-end Developer.
+          //.mountain是給js  
+          img.marginbottom.mountain(src="../img/m_index.svg", alt="")
+          img.loveboat(src="../img/loveboat.svg", alt="")
+          .explore.at_top EXPLORE
+      //關於
+      section#section_about
+        img.marginbottom(src="../img/m_about.svg", alt="")
+        img#lion(src="../img/lion/lion_left_top.svg", alt="")
+        //放叉叉
+        #cross
+        .container-fluid
+          .row
+            .col-sm-4
+              img.my_pic(src="../img/my_pic.svg", alt="")
+            .col-sm-8.container_about
+              .row
+                .col-sm-10
+                  h2.r1text 李淯萱 Yu Xuan Lee
+                .col-sm-2
+                  img.balloon_pink(src="../img/balloon_pink.svg", alt="")
+              .row
+                .col-sm-3
+                  img.balloon_yellow(src="../img/balloon_yellow.svg", alt="")
+                .col-sm-9
+                  h2.r2text I'm a  Front-end Developer.
+              .row
+                .col-sm-10
+                  h2.r3text I have a passion for web design and love to create for web and mobile devices.
+      //作品
+      section#section_works
+        img.marginbottom.mountain_contact(src="../img/mountain_contact.svg", alt="")
+        .works_title WORKS
+        .container-fluid
+          .row
+            .col-sm-4
+                a.hvr-wobble-skew(href="front_end.html")
+                  img(src="../img/c-frontend.png", alt="")
+            .col-sm-4
+                a.hvr-wobble-skew(href="app.html")
+                  img(src="../img/c-app.png", alt="")
+            .col-sm-4
+                a.hvr-wobble-skew(href="others.html")
+                  img(src="../img/c-others.png", alt="")
+      //聯絡
+      section#section_contact
+        a(href='https://www.instagram.com/xuan_tuo/')
+          img.fish#fish_ig(src="../img/fish/fish_ig.svg", alt="")
+        a(href="https://www.facebook.com/profile.php?id=100005284330987")  
+          img.fish#fish_fb(src="../img/fish/fish_fb.svg", alt="")
+        a(href="https://line.me/ti/p/JEos9e2tdK")
+          img.fish#fish_line(src="../img/fish/fish_line.svg", alt="")
+        .container
+            .row
+              .col-sm-6
+                .mail
+                  .envelope
+                    img(src="../img/envelope.svg", alt="")
+                  .letter
+                    form
+                      label Name
+                      input(type="text" name="userName")
+                      label Email
+                      input(type="text" name="Email")
+                      label Content
+                      textarea(name="Content")
+                      button.btn-send Submit
+              .col-sm-4.offset-2
+                h1 CONTACT
+                p If you have any question about me, <br> Don't hestitate to contact me !<br>Email: dsi020070@gmail.com<br>Phone: 0918-068-876
+
+
+      script(src="https://code.jquery.com/jquery-3.3.1.js")
+      script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js")
+      script(src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js")
+      script(src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.11/vue.js")
+      script(src="../js/main.js")

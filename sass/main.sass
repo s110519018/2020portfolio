@@ -1,0 +1,504 @@
+$color_gray: #ECECEC
+$word_gray: #B2B2B2
+$color_white: #F7F7F7
+$color_purple: #A07EC4
+$color_black: #2F323A
+@import url('https://fonts.googleapis.com/css2?family=Concert+One&display=swap')
+// ----------------------------------
+*
+  font-family: 'Concert One','微軟正黑體'
+// //debug用
+// *
+//   border: solid 1px black !important
+// header,section
+//   display: none
+// section#section_works
+//   display: block
+// ----------------------------------
+@mixin ab_center
+  position: absolute
+  left: 50%
+  top: 50%
+  transform: translate(-50%,-50%)  
+  
+@mixin size($w,$h)
+  width: $w
+  height: $h
+// ----------------------------------
+html,body
+  font-size: 16px
+html
+  overflow-x: hidden
+// ----------------------------------
+//導覽列
+nav.navbar
+  transition: 0.5s
+  a
+    transition: 0.5s
+    img
+      width: 70%
+  a.nav-link
+    font-size: 1.2em
+    margin-right: 1.5em
+    letter-spacing: 0.1em
+//漢堡選單
+.navbar-toggler
+  border: 1px solid $color_gray
+.navbar-toggler-icon
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(160, 126, 196, 0.8)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e")
+//在頂部 
+nav.navbar.at_top
+  background-color: $color_white
+  a
+    color: $word_gray
+  a:hover
+    color: $color_black
+//不在頂部
+nav.navbar.bg-black
+  background-color: $color_black
+  a
+    color: $color_white
+// ----------------------------------
+//首頁
+header
+  position: relative
+  background-color: $color_white
+  text-align: center
+  height: 100vh
+  overflow: hidden
+  .title
+    padding: 25vh 0
+    max-width: 100vw
+    h1
+      color: $color_purple
+      font-weight: bold
+      font-size: 8.75em
+    p
+      font-size: 2.5em
+      color: $color_black
+
+  .marginbottom
+    position: absolute
+    width: 100%
+    bottom: -2px
+    right: 0px
+    //both
+    animation: upin 2s both
+    
+  @keyframes upin
+    0%
+      bottom: -100px
+    100%
+      bottom: -2px
+
+  .explore
+    +ab_center
+    font-size: 1.12em
+    font-weight: bold
+    color: $color_purple
+    top: 85%
+    opacity: 0
+    transition: 0.5s
+    &:after
+      display: block
+      content: "V"
+      //左右拉寬上下拉扁
+      transform: scaleX(2.2) scaleY(0.8)
+    &.at_top
+      //中間沒有包含空格，這個的意思表示，某個區塊必須同時具有 one 和 two 的 class 時，才能被 CSS 所選擇到。
+      opacity: 1
+
+  .loveboat
+    position: absolute
+    +ab_center
+    width: 15%
+    top: 76%
+    animation: wave 2.5s linear infinite 
+    
+  @keyframes wave
+    0%
+      top: 76%
+    25%
+      top: 77%
+    50%
+      top: 76%
+    75%
+      top: 75.5%
+    100%
+      top: 76%
+// ----------------------------------
+section
+  position: relative //可以定位的元素
+// ----------------------------------
+//關於
+section#section_about
+  padding: 13vh 5vw
+  background-color: $color_purple
+  .marginbottom
+    position: absolute
+    width: 70%
+    top: calc(100% - 8px) //讓他完美貼合上方，去掉白線
+    left: -2px
+    z-index: 8
+    // background-color: #fff
+  .my_pic
+    width: 100%
+  .container_about
+    margin-left: -2vw
+    transform: rotate(10deg) scale(0.8)
+    .row
+      height: 25vh
+      color: $color_white
+      img
+        width: 80%
+      .r1text
+        font-size: 4em
+        font-weight: bold
+        line-height: 25vh
+        white-space: nowrap
+        //飄移效果
+        transition: 0.1s  
+      .r2text 
+        font-size: 3em
+        line-height: 25vh
+        white-space: nowrap
+        //飄移效果
+        transition: 0.2s    
+      .r3text
+        margin-top: 5.5vh
+        transform: rotate(-10deg)
+        line-height: 10vh
+        //飄移效果
+        transition: 0.3s       
+  #lion
+    position: absolute
+    width: 25%
+    max-height: 233px
+    bottom: 0
+    right: 0
+  #cross
+    position: absolute
+    z-index: 3 //最頂端
+    &:before,&:after
+      content: ""
+      display: block
+      width: 60px
+      height: 15px
+      background-color: #fff
+      position: absolute
+      left: 50%
+      top: 50%
+      transform: translate(-50%,-50%)rotate(45deg)
+    &:after
+      transform: translate(-50%,-50%)rotate(-45deg)
+// ----------------------------------
+//作品
+section#section_works
+  z-index: 5 //比cross還上層才會有hover效果
+  background-color: $color_gray
+  text-align: center
+  .marginbottom
+    position: absolute
+    width: 95%
+    top: calc(100% - 8px) //讓他完美貼合上方，去掉白線
+    left: 0
+    z-index: 0
+  .works_title
+    position: absolute
+    background-color: $color_purple
+    font-size: 2.5em
+    left: 0
+    top: 15vh
+    width: 20vw
+    height: 10vh
+    color: $color_white
+    letter-spacing: 0.1em
+    padding-left: 1em
+  .container-fluid
+    padding: 10vh 5vw
+    .row
+      margin-top: 20vh
+    a
+      cursor: pointer
+      img
+        width: 90%
+        height: 90%
+// ----------------------------------
+//聯絡
+section#section_contact
+  background-color: $color_black
+  padding: 20vh 0px
+  color: $color_black
+  z-index: 4
+  overflow: hidden
+  .fish
+    position: absolute
+    bottom: 0
+    transition: 0.3s
+    cursor: pointer
+  #fish_ig
+    right: 27.5%
+  #fish_fb
+    right: 20%
+  #fish_line
+    right: 12.5%   
+  .mail
+    max-width: 600px
+    height: 100%
+    .envelope
+      //變成絕對定位不參與排列就可以被疊在後面
+      position: absolute
+      z-index: -1
+      top: 0
+      img
+        width: 100%
+    .letter
+      background-color: #F5FDC6
+      width: 100%
+      padding: 3%  
+      padding-left: 40px
+      padding-bottom: 20px
+      transform: translateX(20%)translateY(25%)
+  label
+    font-size: 1.5em    
+  input
+    width: 50%
+  textarea
+    width: 95%
+    height: 15vh  
+  input,textarea
+    border: none
+    border: 3px solid $color_black
+    background-color: #F5FDC6
+    //換行
+    display: block
+    transform: translateY(-5%)
+  button
+    width: 30%
+    height: 40px
+    background-color: #EDC481
+    font-size: 1.5em
+    //消除button的默认样式
+    margin: 0
+    padding: 0
+    outline: none
+    border: 1px solid transparent
+    margin-left: 65%
+    margin-top: 3%
+    cursor: pointer
+    &:hover
+      background-color: $color_black
+      
+      color: #EDC481
+      transition: 0.5s
+  .col-sm-4
+    // border: 1px solid #fff
+    color: $color_white
+    padding: 10vh 0
+    h1
+      font-size: 2.8em
+    p
+      font-size: 1.5em
+
+// ----------------------------------
+//Rwd部分
+//超過1920
+@media screen and ( min-width: 1920px  )
+  html,body
+    font-size: 23px
+  //首頁
+  header
+    .loveboat
+      width: 18%
+      top: 76%
+  //關於
+  section#section_about
+    #lion
+      max-height: 350px
+      // border: 1px solid black
+  //作品
+  section#section_works
+    .works_title
+      font-size: 3em
+    .container-fluid
+      padding: 22vh 5vw
+      .row
+        margin-top: 15vh
+      a
+        // border: 1px solid black
+        width: 100%
+        height: 100%
+  //聯絡
+  section#section_contact
+    .mail
+      .envelope
+        left: -50%
+        img
+          width: 150%
+      .letter
+        width: 150%
+        transform: translateX(-20%)translateY(25%)
+    button
+      width: 30%
+      height: 50px
+      margin-top: 2%
+    .col-sm-4
+      //強制文字不換行
+      white-space: nowrap
+// ----------------------------------
+//Rwd部分
+//小於1310
+@media screen and ( max-width: 1317px  )
+  html,body
+    font-size: 14px
+  //首頁
+  header
+    .loveboat
+      width: 18%
+  //關於
+  section#section_about
+    .my_pic
+      +ab_center
+    .container_about
+      .row
+        .r1text
+          font-size: 4em
+          text-align: center
+        .r2text
+          font-size: 3em
+          line-height: 25vh
+        .r3text
+          font-size: 3em
+  //作品
+  section#section_works
+    .works_title
+      font-size: 1.5em
+      height: 70px
+  //聯絡
+  section#section_contact
+    .fish
+      width: 13%
+    #fish_ig
+      right: 28%
+    #fish_fb
+      right: 18%
+    #fish_line
+      right: 8%
+    input,textarea
+      transform: translateY(0%)
+  
+// ----------------------------------
+//Rwd部分
+//小於1024
+@media screen and ( max-width: 1024px  )
+  html,body
+    font-size: 12px
+  //首頁
+  header
+    .marginbottom
+      width: 110%
+    .explore
+      font-size: 1.8em
+    .loveboat
+      width: 23%
+  section#section_about
+    .my_pic
+      +ab_center
+    .container_about
+      .row
+        .r1text
+          font-size: 5em
+        .r2text
+          font-size: 3.3em
+        .r3text
+          font-size: 2.5em
+  //作品
+  section#section_works
+    .works_title
+      height: 70px
+      font-size: 3em
+// ----------------------------------
+//Rwd部分
+//小於768
+@media screen and ( max-width: 768px  )
+  html,body
+    font-size: 10px
+  //關於
+  section#section_about
+    .my_pic
+      position: relative
+      width: 100%
+    .container_about
+      margin-left: 0
+      transform: rotate(0deg) scale(0.8)
+      .row
+        height: 15vh
+        img
+          display: none
+        .r1text
+          font-size: 2em
+          line-height: 15vh
+          text-align: center
+        .r2text
+          font-size: 2em
+          line-height: 15vh
+        .r3text
+          font-size: 2em
+          text-align: center
+          line-height: 50px
+  //作品
+  section#section_works
+    .works_title
+      font-size: 2em
+      width: 30%
+      height: 50px
+      text-align: center
+      padding: 0
+      padding-top: 5px
+    .row 
+      margin-top: 0
+      .col-sm-4
+        margin-top: 5%  
+  //聯絡
+  section#section_contact
+    .fish
+      width: 13%
+// ----------------------------------
+//Rwd部分
+//小於600
+@media screen and ( max-width: 600px  )
+  html,body
+    font-size: 12px
+  //聯絡
+  section#section_contact
+    .mail
+      max-width: 350px
+    .col-sm-4
+      margin-top: 10%
+    .fish
+      width: 20%
+    #fish_ig
+      right: 52%
+    #fish_fb
+      right: 38%
+    #fish_line
+      right: 24%
+
+// ----------------------------------
+//Rwd部分
+//小於375
+@media screen and ( max-width: 375px  )
+  html,body
+    font-size: 10px
+  //關於
+  section#section_about
+    .container-fluid
+      margin-bottom: 5vh
+      .r1text,.r2text
+        white-space: normal
+  //聯絡
+  section#section_contact
+    .mail
+      max-width: 300px
+      .letter
+        transform: translateX(10%)translateY(15%)
